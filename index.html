@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Odev</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">TUGU.</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul id="sidebar">
+          <li><a href="#anasayfa">ANA SAYFA</a></li>
+          <li><a href="#hakkimda">HAKKIMDA</a></li>
+          <li><a href="#iletisim">İLETİŞİM</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="anasayfam" id="anasayfa">
+      <div class="anasayfa__container">
+        <div class="content">
+          <p class="subtitle">MERHABA</p>
+          <h1 class="title">
+            Ben <span>Turgut<br /></span> Web Geliştirici
+          </h1>
+          <p class="description">
+            Anlık olarak Süleyman Demirel üniversitesinde bilgisayar
+            mühendisliği üzerine tahsil alıyorum. Bu benim kişisel Portfoliom
+            umarım keyif alırsınız. Eğer yazdığım diğer kodları görmek
+            isterseniz
+            <span style="color: rgb(195, 134, 134)">GitHub</span> adresimi
+            ziyaret edebilirsiniz.
+          </p>
+          <a href="https://github.com/turgutTM">
+            <img class="github-logo" src="github.png" alt="github" />
+          </a>
+        </div>
+        <div class="image">
+          <img src="WhatsApp Image 2023-10-26 at 22.13.15.jpeg" alt="profile" />
+        </div>
+      </div>
+    </section>
+    <section class="hakkimda" id="hakkimda">
+      <div class="hakkimda-container">
+        <div class="hakkimda">
+          <div class="hakkimda1">
+            <h1 class="baslik">Hakkımda</h1>
+            Yaklaşık 1 yıldır Web Sitesi alanında kendimi geliştiriyorum ve şu
+            an
+            <span style="color: rgb(110, 92, 71)">React,NodeJS,MongoDB</span>
+            alanlarında yüksek bilgiye sahibim. Şimdi yeni bir
+            <span style="color: rgb(10, 124, 86)"> MERN</span> projesi üzerinde
+            çalışıyorum. Kısaca size bu tablo ile tecrübelerimi sunabilirim:
+            <div class="tecrubeler">
+              <div class="skill">
+                <p class="javascripttext">JavaScript</p>
+                <img class="bar1" src="100bar.png" />
+              </div>
+              <div class="skill2">
+                <p>React</p>
+                <img class="bar2" src="90bar.png" />
+              </div>
+              <div class="skill3">
+                <p>Node.js</p>
+                <img class="bar3" src="90bar.png" />
+              </div>
+            </div>
+          </div>
+          <img class="galaxy" src="galaxy.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <section class="iletisim" id="iletisim">
+      <div class="genel">
+      <div class="contact-form">
+        <h2>İletişim Formu</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">İsim:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon Numarası:</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="message">Mesajınız:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Gönder</button>
+        </form>
+      </div>     
+    </div> 
+  </div>
+    </section>
+    <div class="footer">
+      <p>Tüm Bilgiler koruma altındadır ©</p>
+  </div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('ul li a');
+
+  links.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var targetId = this.getAttribute('href').substring(1);
+      var targetElement = document.getElementById(targetId);
+
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth'
+      });
+    });
+  });
+});
+
+
+</script>
+
+  
+  </body>
+</html>
